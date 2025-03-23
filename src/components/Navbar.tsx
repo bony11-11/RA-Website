@@ -39,7 +39,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollToSection('hero')}>
             <div className="flex items-center">
-              <img src="/lovable-uploads/77ebbfe7-c793-402b-bf43-de2b56f01dc1.png" alt="RA Tents Logo" className="double it in size object-scale-down" />
+              <img src="/lovable-uploads/77ebbfe7-c793-402b-bf43-de2b56f01dc1.png" alt="RA Tents Logo" className="Reduce the size a little bit to make it equal in size to contact us button" />
             </div>
           </div>
 
