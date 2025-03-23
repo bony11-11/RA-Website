@@ -64,7 +64,7 @@ const Hero = () => {
           block: 'start'
         });
       }}>
-          <div className="place it under the buttons below it">
+          <div className="flex flex-col items-center">
             <span className="text-gold-500 mb-2 text-justify font-light text-sm">Scroll</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="Relocate it below the explore our solution button and contact us">
               <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="#FCC007" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
