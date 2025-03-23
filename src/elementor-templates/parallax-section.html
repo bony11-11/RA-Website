@@ -1,0 +1,251 @@
+
+<!-- Parallax Section HTML Template for Elementor -->
+<div class="ra-parallax-section">
+  <!-- Parallax Background -->
+  <div class="ra-parallax-background" style="background-image: url('YOUR_BACKGROUND_IMAGE_HERE')"></div>
+  
+  <!-- Overlay -->
+  <div class="ra-parallax-overlay"></div>
+  
+  <!-- Content Container -->
+  <div class="ra-parallax-content">
+    <!-- Your content goes here -->
+    <div class="ra-section-badge">Featured</div>
+    
+    <h2 class="ra-section-title">
+      Your Section Title Here
+    </h2>
+    
+    <p class="ra-section-description">
+      This is where your section description goes. You can replace this text with your own content.
+    </p>
+    
+    <!-- Feature Cards -->
+    <div class="ra-feature-cards">
+      <!-- Feature Card 1 -->
+      <div class="ra-feature-card">
+        <div class="ra-feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+          </svg>
+        </div>
+        <h3 class="ra-feature-title">Feature One</h3>
+        <p class="ra-feature-description">Description of your first feature goes here.</p>
+      </div>
+      
+      <!-- Feature Card 2 -->
+      <div class="ra-feature-card">
+        <div class="ra-feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <h3 class="ra-feature-title">Feature Two</h3>
+        <p class="ra-feature-description">Description of your second feature goes here.</p>
+      </div>
+      
+      <!-- Feature Card 3 -->
+      <div class="ra-feature-card">
+        <div class="ra-feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          </svg>
+        </div>
+        <h3 class="ra-feature-title">Feature Three</h3>
+        <p class="ra-feature-description">Description of your third feature goes here.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Parallax Section Styles */
+.ra-parallax-section {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+.ra-parallax-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* This creates the parallax effect */
+  z-index: 0;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+.ra-parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.ra-parallax-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ra-section-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background-color: rgba(252, 192, 7, 0.2);
+  color: #FCC007;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  border: 1px solid rgba(252, 192, 7, 0.3);
+}
+
+.ra-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.ra-section-description {
+  font-size: 18px;
+  color: #d1d1d1;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ra-feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.ra-feature-card {
+  background-color: rgba(10, 10, 10, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(252, 192, 7, 0.2);
+  border-radius: 8px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.ra-feature-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(252, 192, 7, 0.5);
+  box-shadow: 0 10px 25px -5px rgba(252, 192, 7, 0.1);
+}
+
+.ra-feature-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(252, 192, 7, 0.2);
+  border-radius: 50%;
+  color: #FCC007;
+}
+
+.ra-feature-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #FCC007;
+  margin-bottom: 12px;
+}
+
+.ra-feature-description {
+  font-size: 16px;
+  color: #d1d1d1;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .ra-feature-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ra-section-title {
+    font-size: 28px;
+  }
+  
+  .ra-section-description {
+    font-size: 16px;
+  }
+  
+  .ra-feature-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation for scroll reveal */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Parallax effect on scroll
+  window.addEventListener('scroll', function() {
+    const parallaxBg = document.querySelector('.ra-parallax-background');
+    const scrollPosition = window.pageYOffset;
+    
+    // Apply parallax effect with a slower scroll rate
+    parallaxBg.style.transform = 'translateY(' + scrollPosition * 0.4 + 'px)';
+  });
+  
+  // Animate elements when they come into view
+  const animateElements = document.querySelectorAll('.ra-feature-card, .ra-section-badge, .ra-section-title, .ra-section-description');
+  
+  animateElements.forEach(function(element) {
+    element.classList.add('fade-in');
+  });
+  
+  // Intersection Observer for scroll animations
+  const observer = new IntersectionObserver(
+    function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  
+  animateElements.forEach(function(element) {
+    observer.observe(element);
+  });
+});
+</script>

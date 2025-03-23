@@ -1,0 +1,390 @@
+
+<!-- Product Showcase HTML Template for Elementor -->
+<div class="ra-product-showcase">
+  <div class="ra-product-header">
+    <div class="ra-section-badge">Our Offerings</div>
+    <h2 class="ra-section-title">Our Premium Tent Solutions</h2>
+    <p class="ra-section-description">
+      Elegance and functionality combined to create the perfect atmosphere for your events
+    </p>
+  </div>
+  
+  <div class="ra-product-content">
+    <!-- Product Tabs -->
+    <div class="ra-product-tabs">
+      <button class="ra-tab-button active" data-product="product1">Marquee Tents</button>
+      <button class="ra-tab-button" data-product="product2">Arched Tents</button>
+      <button class="ra-tab-button" data-product="product3">Bedouin Tents</button>
+    </div>
+    
+    <!-- Product Display -->
+    <div class="ra-product-display">
+      <!-- Product 1 -->
+      <div class="ra-product active" id="product1">
+        <div class="ra-product-image">
+          <img src="YOUR_PRODUCT1_IMAGE_HERE" alt="Marquee Tents" />
+          <div class="ra-image-overlay"></div>
+        </div>
+        <div class="ra-product-info">
+          <h3 class="ra-product-name">Marquee Tents</h3>
+          <p class="ra-product-description">
+            Perfect for large events, gatherings, and exhibitions. These spacious tents offer a versatile solution with various size options.
+          </p>
+          <ul class="ra-product-features">
+            <li>Customizable sizes and layouts</li>
+            <li>Weather-resistant materials</li>
+            <li>Elegant and sophisticated design</li>
+            <li>Easy installation and dismantling</li>
+          </ul>
+          <a href="#contact" class="ra-product-cta">Inquire Now</a>
+        </div>
+      </div>
+      
+      <!-- Product 2 -->
+      <div class="ra-product" id="product2">
+        <div class="ra-product-image">
+          <img src="YOUR_PRODUCT2_IMAGE_HERE" alt="Arched Tents" />
+          <div class="ra-image-overlay"></div>
+        </div>
+        <div class="ra-product-info">
+          <h3 class="ra-product-name">Arched Tents</h3>
+          <p class="ra-product-description">
+            Known for their elegant curved peak, these tents provide a touch of sophistication for weddings, galas, or product launches.
+          </p>
+          <ul class="ra-product-features">
+            <li>Distinctive arched design</li>
+            <li>Premium quality materials</li>
+            <li>Suitable for upscale events</li>
+            <li>Customizable interiors</li>
+          </ul>
+          <a href="#contact" class="ra-product-cta">Inquire Now</a>
+        </div>
+      </div>
+      
+      <!-- Product 3 -->
+      <div class="ra-product" id="product3">
+        <div class="ra-product-image">
+          <img src="YOUR_PRODUCT3_IMAGE_HERE" alt="Bedouin Tents" />
+          <div class="ra-image-overlay"></div>
+        </div>
+        <div class="ra-product-info">
+          <h3 class="ra-product-name">Bedouin Tents</h3>
+          <p class="ra-product-description">
+            Experience the charm and tradition of the region with our authentic Bedouin tents, which are ideal for cultural events or outdoor dining experiences.
+          </p>
+          <ul class="ra-product-features">
+            <li>Authentic traditional design</li>
+            <li>Adaptable to various terrains</li>
+            <li>Creates a unique ambiance</li>
+            <li>Perfect for themed events</li>
+          </ul>
+          <a href="#contact" class="ra-product-cta">Inquire Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Product Showcase Styles */
+.ra-product-showcase {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #0a0a0a;
+}
+
+.ra-product-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ra-section-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background-color: rgba(252, 192, 7, 0.2);
+  color: #FCC007;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  border: 1px solid rgba(252, 192, 7, 0.3);
+}
+
+.ra-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #FCC007;
+  margin-bottom: 16px;
+  font-family: 'Playfair Display', serif;
+}
+
+.ra-section-description {
+  font-size: 18px;
+  color: #d1d1d1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ra-product-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ra-product-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ra-tab-button {
+  padding: 12px 24px;
+  background-color: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(252, 192, 7, 0.2);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.ra-tab-button:hover {
+  border-color: rgba(252, 192, 7, 0.5);
+  background-color: rgba(252, 192, 7, 0.1);
+}
+
+.ra-tab-button.active {
+  background-color: rgba(252, 192, 7, 0.2);
+  border-color: rgba(252, 192, 7, 0.5);
+  color: #FCC007;
+}
+
+.ra-product-display {
+  position: relative;
+}
+
+.ra-product {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.ra-product.active {
+  display: grid;
+  opacity: 1;
+}
+
+.ra-product-image {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 400px;
+}
+
+.ra-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.ra-product:hover .ra-product-image img {
+  transform: scale(1.05);
+}
+
+.ra-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+
+.ra-product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ra-product-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #FCC007;
+  margin-bottom: 16px;
+  font-family: 'Playfair Display', serif;
+}
+
+.ra-product-description {
+  font-size: 16px;
+  color: #d1d1d1;
+  margin-bottom: 20px;
+}
+
+.ra-product-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.ra-product-features li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+}
+
+.ra-product-features li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23FCC007' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.ra-product-cta {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #FCC007;
+  color: #0a0a0a;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: 16px;
+}
+
+.ra-product-cta:hover {
+  background-color: #D9A206;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .ra-product {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .ra-product-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ra-product-showcase {
+    padding: 60px 16px;
+  }
+  
+  .ra-section-title {
+    font-size: 28px;
+  }
+  
+  .ra-section-description {
+    font-size: 16px;
+  }
+  
+  .ra-tab-button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .ra-product-name {
+    font-size: 24px;
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Tab functionality
+  const tabButtons = document.querySelectorAll('.ra-tab-button');
+  const products = document.querySelectorAll('.ra-product');
+  
+  tabButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Remove active class from all tabs
+      tabButtons.forEach(function(btn) {
+        btn.classList.remove('active');
+      });
+      
+      // Add active class to clicked tab
+      this.classList.add('active');
+      
+      // Hide all products
+      products.forEach(function(product) {
+        product.classList.remove('active');
+      });
+      
+      // Show selected product
+      const productId = this.getAttribute('data-product');
+      document.getElementById(productId).classList.add('active');
+    });
+  });
+  
+  // Scroll to contact section on CTA click
+  const ctaButtons = document.querySelectorAll('.ra-product-cta');
+  
+  ctaButtons.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+  
+  // Add animation classes to elements
+  const animateElements = document.querySelectorAll('.ra-product-header, .ra-product-tabs, .ra-product-display');
+  
+  animateElements.forEach(function(element) {
+    element.classList.add('fade-in');
+  });
+  
+  // Intersection Observer for scroll animations
+  const observer = new IntersectionObserver(
+    function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  
+  animateElements.forEach(function(element) {
+    observer.observe(element);
+  });
+});
+</script>
