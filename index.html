@@ -1,26 +1,672 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cozy-tent-escapes</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RA Tents - Premium Tent Solutions</title>
+  <meta name="description" content="Premium tent solutions for events, weddings, exhibitions, and more. Over 36 years of experience crafting elegant shelters.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="logo">
+          <a href="#hero">
+            <img src="/lovable-uploads/77ebbfe7-c793-402b-bf43-de2b56f01dc1.png" alt="RA Tents Logo">
+          </a>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#solutions" class="nav-link">Solutions</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#services" class="nav-link">Services</a>
+          <button class="contact-btn" id="contact-popup-btn">Contact Us</button>
+        </div>
+        
+        <div class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <div class="close-menu">×</div>
+      <div class="mobile-menu-links">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#solutions" class="mobile-nav-link">Solutions</a>
+        <a href="#features" class="mobile-nav-link">Features</a>
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#contact" class="mobile-nav-link highlight">Contact Us</a>
+        
+        <div class="mobile-contact-info">
+          <h3>Quick Contact</h3>
+          <a href="tel:+971501234567" class="contact-item">
+            <i class="icon-phone"></i>
+            <span>+971 50 123 4567</span>
+          </a>
+          <a href="https://wa.me/971501234567" class="contact-item">
+            <i class="icon-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+          <a href="mailto:info@ratents.com" class="contact-item">
+            <i class="icon-email"></i>
+            <span>info@ratents.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Contact Popup -->
+    <div class="contact-popup" id="contact-popup">
+      <div class="contact-popup-content">
+        <div class="close-popup">×</div>
+        <h3>Contact Us</h3>
+        <div class="contact-methods">
+          <a href="tel:+971501234567" class="contact-method">
+            <i class="icon-phone"></i>
+            <span>+971 50 123 4567</span>
+          </a>
+          <a href="https://wa.me/971501234567" class="contact-method">
+            <i class="icon-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+          <a href="mailto:info@ratents.com" class="contact-method">
+            <i class="icon-email"></i>
+            <span>info@ratents.com</span>
+          </a>
+        </div>
+        <button class="contact-form-btn" onclick="scrollToSection('contact')">Go to Contact Form</button>
+      </div>
+    </div>
+  </nav>
 
-    <meta property="og:title" content="Lovable Generated Project" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-bg" style="background-image: url(/lovable-uploads/e2929eef-38ca-40e0-8d83-8810707c2324.png);"></div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Specialized in premium tent solutions for over 36 years</div>
+        
+        <h1 class="hero-title">
+          <span>Elegant <span class="highlight">Shelters</span> for</span>
+          <span>Every <span class="highlight">Occasion</span></span>
+        </h1>
+        
+        <p class="hero-description">
+          Whether you're hosting a business event, a grand wedding, a product launch, or a community gathering, we have the perfect temporary structure to accommodate your guests in style and comfort.
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="#solutions" class="btn-primary">Explore Our Solutions</a>
+          <a href="#contact" class="btn-outline">Request a Quote</a>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator" onclick="scrollToSection('about')">
+        <span>Scroll</span>
+        <i class="icon-arrow-down"></i>
+      </div>
+    </div>
+  </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Trusted Since 1986</h2>
+        <p class="section-subtitle">Innovative Tent Solutions for Every Occasion</p>
+      </div>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+      <div class="about-content">
+        <div class="about-image">
+          <div class="image-decorator"></div>
+          <div class="image-container">
+            <img src="/lovable-uploads/756ff86f-5dbc-4c7e-8f2a-4b389e0297c4.png" alt="Elegant tent solution">
+          </div>
+        </div>
+        
+        <div class="about-text">
+          <h3>Crafting Premium Shelters That Define Elegance</h3>
+          
+          <p>For over three decades, RA Tents has been at the forefront of designing and manufacturing premium tent solutions that combine aesthetic appeal with unmatched functionality.</p>
+          
+          <p>We specialize in various gazebo tents, including Ramadan tents and parking sheds, all crafted with meticulous attention to detail and designed to withstand the test of time.</p>
+          
+          <div class="about-features">
+            <div class="feature-card">
+              <h4>Quality</h4>
+              <p>Top-notch materials for durable and reliable tents.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4>Variety</h4>
+              <p>Explore a diverse selection of gazebo and tent designs.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h4>Experience</h4>
+              <p>36 years of experience in crafting exceptional shades and tents.</p>
+            </div>
+          </div>
+          
+          <a href="#contact" class="btn-primary">Schedule a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase Section -->
+  <section id="solutions" class="solutions-section">
+    <div class="top-gradient"></div>
+    
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Our Offerings</div>
+        <h2 class="section-title">Our Premium Tent Solutions</h2>
+        <p class="section-subtitle">Elegance and functionality combined to create the perfect atmosphere for your events</p>
+      </div>
+
+      <div class="solutions-content">
+        <div class="solutions-image">
+          <div class="solution-images-container">
+            <!-- Images will be changed via JavaScript -->
+            <div class="solution-image active" data-id="1">
+              <img src="/lovable-uploads/a7bc39fb-a644-47d0-a541-fb26b800dfc1.png" alt="Marquee Tents">
+              <div class="image-overlay"></div>
+              <h3 class="solution-image-title">Marquee Tents</h3>
+            </div>
+            <div class="solution-image" data-id="2">
+              <img src="/lovable-uploads/f715e17d-78a8-4d7c-b4f1-edf76ebad6de.png" alt="Arched Tents">
+              <div class="image-overlay"></div>
+              <h3 class="solution-image-title">Arched Tents</h3>
+            </div>
+            <div class="solution-image" data-id="3">
+              <img src="/lovable-uploads/91ef57b8-5f63-4b2e-a03a-af98fae329d1.png" alt="Bedouin Tents">
+              <div class="image-overlay"></div>
+              <h3 class="solution-image-title">Bedouin Tents</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="solutions-selector">
+          <div class="solution-card active" data-id="1">
+            <h3>Marquee Tents</h3>
+            <p>Perfect for large events, gatherings, and exhibitions. These spacious tents offer a versatile solution with various size options.</p>
+            <a href="#contact" class="btn-outline">Request Information</a>
+          </div>
+          
+          <div class="solution-card" data-id="2">
+            <h3>Arched Tents</h3>
+            <p>Known for their elegant curved peak, these tents provide a touch of sophistication for weddings, galas, or product launches.</p>
+            <a href="#contact" class="btn-outline">Request Information</a>
+          </div>
+          
+          <div class="solution-card" data-id="3">
+            <h3>Bedouin Tents</h3>
+            <p>Experience the charm and tradition of the region with our authentic Bedouin tents, which are ideal for cultural events or outdoor dining experiences.</p>
+            <a href="#contact" class="btn-outline">Request Information</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="#contact" class="btn-primary">View Full Product Catalog</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section parallax-section" style="background-image: url(/lovable-uploads/f0cb1f98-919e-4095-b840-69d0bc479c82.png);">
+    <div class="parallax-overlay"></div>
+    
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Event Ready</div>
+        <h2 class="section-title">Customizable Designs</h2>
+        <p class="section-subtitle">Whether you're hosting a business event, a grand wedding, a product launch, or a community gathering, we have the perfect temporary structure to accommodate your guests in style and comfort.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="icon-star"></i>
+          </div>
+          <h3>Elegant Design</h3>
+          <p>Our tents feature sophisticated aesthetics that elevate any event. From intricate patterns to clean lines, each design reflects luxury and refinement.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="icon-customize"></i>
+          </div>
+          <h3>Customizable Features</h3>
+          <p>Tailor your tent to your specific needs with various customization options. Choose from different sizes, colors, and additional features to make your event unique.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="icon-shield"></i>
+          </div>
+          <h3>Weather Resistant</h3>
+          <p>Our structures are engineered to withstand various weather conditions, providing your event with protection and peace of mind regardless of the elements.</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="icon-setup"></i>
+          </div>
+          <h3>Easy Setup</h3>
+          <p>Our professional team ensures quick and efficient installation, minimizing disruption and maximizing your event space utilization.</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="icon-eco"></i>
+          </div>
+          <h3>Eco-Friendly Options</h3>
+          <p>We offer sustainable tent solutions with environmentally friendly materials and energy-efficient lighting options for conscious event planning.</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="icon-support"></i>
+          </div>
+          <h3>24/7 Support</h3>
+          <p>Our dedicated support team is available around the clock to address any concerns before, during, and after your event to ensure everything runs smoothly.</p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="#contact" class="btn-primary">Discuss Your Requirements</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">What We Offer</div>
+        <h2 class="section-title">Our Specialized Services</h2>
+        <p class="section-subtitle">Crafting exceptional structures that combine aesthetics with functionality</p>
+      </div>
+
+      <div class="services-content">
+        <div class="services-tabs">
+          <div class="service-tab active" data-id="1">
+            <div class="tab-icon">
+              <i class="icon-tent"></i>
+            </div>
+            <div class="tab-content">
+              <h3>Tent Solutions</h3>
+              <p>Tailored tent designs for every occasion, from intimate gatherings to grand celebrations.</p>
+            </div>
+          </div>
+          
+          <div class="service-tab" data-id="2">
+            <div class="tab-icon">
+              <i class="icon-shade"></i>
+            </div>
+            <div class="tab-content">
+              <h3>Shade Structures</h3>
+              <p>Providing shelter with elegance and durability, perfect for outdoor spaces.</p>
+            </div>
+          </div>
+          
+          <div class="service-tab" data-id="3">
+            <div class="tab-icon">
+              <i class="icon-parking"></i>
+            </div>
+            <div class="tab-content">
+              <h3>Parking Sheds</h3>
+              <p>Protect vehicles with our reliable parking shed designs, built for longevity.</p>
+            </div>
+          </div>
+          
+          <div class="service-tab" data-id="4">
+            <div class="tab-icon">
+              <i class="icon-event"></i>
+            </div>
+            <div class="tab-content">
+              <h3>Event Planning</h3>
+              <p>Comprehensive event support from concept to execution with our expert team.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="service-displays">
+          <div class="service-display active" data-id="1">
+            <div class="service-image">
+              <img src="/lovable-uploads/8c4e2a6a-84dd-46c4-9f50-fa6c0862adb3.png" alt="Tent Solutions">
+              <div class="image-overlay"></div>
+            </div>
+            <div class="service-details">
+              <h3>Tent Solutions</h3>
+              <p>Our comprehensive tent solutions are designed to meet the diverse needs of our clients. From elegant wedding tents to robust commercial structures, we provide end-to-end services including:</p>
+              <ul>
+                <li>Custom tent design and manufacturing</li>
+                <li>Professional installation and dismantling</li>
+                <li>Climate control solutions (AC/heating)</li>
+                <li>Interior decoration and lighting</li>
+                <li>Flooring and staging options</li>
+              </ul>
+              <a href="#contact" class="btn-outline">Get a Custom Quote</a>
+            </div>
+          </div>
+          
+          <div class="service-display" data-id="2">
+            <div class="service-image">
+              <img src="/lovable-uploads/b8fd58c2-b95b-45ca-adfc-b6938c640c90.png" alt="Shade Structures">
+              <div class="image-overlay"></div>
+            </div>
+            <div class="service-details">
+              <h3>Shade Structures</h3>
+              <p>Our shade structures provide elegant protection from the elements while enhancing your outdoor spaces:</p>
+              <ul>
+                <li>Permanent and semi-permanent shade solutions</li>
+                <li>Custom designs for gardens, pools, and patios</li>
+                <li>Commercial shade structures for restaurants and venues</li>
+                <li>UV-resistant and waterproof materials</li>
+                <li>Architectural design integration</li>
+              </ul>
+              <a href="#contact" class="btn-outline">Discuss Your Project</a>
+            </div>
+          </div>
+          
+          <div class="service-display" data-id="3">
+            <div class="service-image">
+              <img src="/lovable-uploads/92914789-42b5-4728-af4f-02073822ac6e.png" alt="Parking Sheds">
+              <div class="image-overlay"></div>
+            </div>
+            <div class="service-details">
+              <h3>Parking Sheds</h3>
+              <p>Our parking shed solutions offer durable protection for vehicles with aesthetic appeal:</p>
+              <ul>
+                <li>Residential and commercial parking structures</li>
+                <li>Single and multi-vehicle configurations</li>
+                <li>Weather-resistant materials with extended warranties</li>
+                <li>Customizable designs to match architectural styles</li>
+                <li>Solar panel integration options</li>
+              </ul>
+              <a href="#contact" class="btn-outline">Request Information</a>
+            </div>
+          </div>
+          
+          <div class="service-display" data-id="4">
+            <div class="service-image">
+              <img src="/lovable-uploads/98a47167-794f-490a-9bf0-e610147a6116.png" alt="Event Planning">
+              <div class="image-overlay"></div>
+            </div>
+            <div class="service-details">
+              <h3>Event Planning</h3>
+              <p>Our event planning services complement our tent solutions to provide a seamless experience:</p>
+              <ul>
+                <li>Venue selection and layout planning</li>
+                <li>Coordination with vendors and suppliers</li>
+                <li>On-site management during setup and event</li>
+                <li>Technical support for lighting and sound</li>
+                <li>Post-event breakdown and cleanup</li>
+              </ul>
+              <a href="#contact" class="btn-outline">Plan Your Event</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section parallax-section" style="background-image: url(/lovable-uploads/b4f01652-85d5-40fc-a99c-b9f22dcd14e5.png);">
+    <div class="parallax-overlay"></div>
+    
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Client Stories</div>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">Hear from those who have experienced our exceptional service and products</p>
+      </div>
+
+      <div class="testimonial-slider">
+        <div class="testimonial-track">
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon">"</div>
+              <p>The quality and elegance of RA Tents' structures transformed our corporate event. Their team was professional, attentive to detail, and delivered beyond our expectations.</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Ahmed Al Marzouqi</h4>
+                  <p>Event Director, Dubai Corporate Events</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon">"</div>
+              <p>We needed a unique solution for our outdoor wedding that could withstand uncertain weather while looking elegant. RA Tents delivered exactly what we needed, and our guests were impressed by the beautiful setup.</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Sarah & Mohammed</h4>
+                  <p>Wedding Clients</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon">"</div>
+              <p>The parking shed RA Tents installed at our commercial property is not only functional but also enhances the overall aesthetic of our building. Three years later, it still looks great and performs perfectly.</p>
+              <div class="testimonial-author">
+                <div class="author-info">
+                  <h4>Faisal Abdullah</h4>
+                  <p>Property Manager, Al Wasl Business Center</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slider-controls">
+          <button class="prev-slide" aria-label="Previous testimonial"><i class="icon-arrow-left"></i></button>
+          <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+          <button class="next-slide" aria-label="Next testimonial"><i class="icon-arrow-right"></i></button>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="#contact" class="btn-primary">Become Our Next Success Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">Get In Touch</div>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Reach out to discuss your project or request more information about our services</p>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="logo">
+            <img src="/lovable-uploads/77ebbfe7-c793-402b-bf43-de2b56f01dc1.png" alt="RA Tents Logo">
+          </div>
+          
+          <p class="company-description">
+            For over three decades, RA Tents has been delivering premium tent solutions across the region. Our commitment to quality and customer satisfaction has made us a trusted partner for all temporary structure needs.
+          </p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="icon-location"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Dubai Industrial City, Building 12A<br>Dubai, United Arab Emirates</p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <i class="icon-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+971 50 123 4567<br>+971 4 123 4567</p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <i class="icon-email"></i>
+              <div>
+                <h4>Email</h4>
+                <p>info@ratents.com<br>sales@ratents.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <i class="icon-clock"></i>
+              <div>
+                <h4>Working Hours</h4>
+                <p>Sunday - Thursday: 8:00 AM - 6:00 PM<br>Friday - Saturday: By appointment</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="icon-facebook"></i></a>
+            <a href="#" class="social-link"><i class="icon-instagram"></i></a>
+            <a href="#" class="social-link"><i class="icon-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="icon-twitter"></i></a>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <form id="contactForm" class="contact-form">
+            <div class="form-header">
+              <h3>Send Us a Message</h3>
+              <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+            </div>
+            
+            <div class="form-group">
+              <label for="name">Full Name*</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group half">
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+              </div>
+              
+              <div class="form-group half">
+                <label for="phone">Phone Number*</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject*</label>
+              <input type="text" id="subject" name="subject" required placeholder="What is this regarding?">
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message*</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project or inquiry"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label class="checkbox-container">
+                <input type="checkbox" required name="consent">
+                <span class="checkmark"></span>
+                I consent to having this website store my submitted information so they can respond to my inquiry.
+              </label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="/lovable-uploads/77ebbfe7-c793-402b-bf43-de2b56f01dc1.png" alt="RA Tents Logo">
+          <p>Elegant Shelters for Every Occasion</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#solutions">Our Products</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3>Products</h3>
+            <ul>
+              <li><a href="#solutions">Marquee Tents</a></li>
+              <li><a href="#solutions">Arched Tents</a></li>
+              <li><a href="#solutions">Bedouin Tents</a></li>
+              <li><a href="#solutions">Parking Sheds</a></li>
+              <li><a href="#solutions">Custom Solutions</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="#services">Tent Rental</a></li>
+              <li><a href="#services">Installation</a></li>
+              <li><a href="#services">Maintenance</a></li>
+              <li><a href="#services">Event Support</a></li>
+              <li><a href="#services">Consulting</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2023 RA Tents. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="icon-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="icon-linkedin"></i></a>
+          <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <i class="icon-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
 </html>
