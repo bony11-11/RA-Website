@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 
 interface ElementorParallaxProps {
@@ -19,26 +18,22 @@ const ElementorParallax: React.FC<ElementorParallaxProps> = ({
   features 
 }) => {
   useEffect(() => {
-    // Parallax effect on scroll
     const handleScroll = () => {
       const parallaxBg = document.querySelector('.ra-parallax-background');
       if (parallaxBg) {
         const scrollPosition = window.pageYOffset;
-        // Apply parallax effect with a slower scroll rate
         (parallaxBg as HTMLElement).style.transform = `translateY(${scrollPosition * 0.4}px)`;
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     
-    // Animate elements when they come into view
     const animateElements = document.querySelectorAll('.ra-feature-card, .ra-section-badge, .ra-section-title, .ra-section-description');
     
     animateElements.forEach(element => {
       element.classList.add('fade-in');
     });
     
-    // Intersection Observer for scroll animations
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -64,15 +59,11 @@ const ElementorParallax: React.FC<ElementorParallaxProps> = ({
 
   return (
     <div className="ra-parallax-section">
-      {/* Parallax Background */}
       <div className="ra-parallax-background" style={{ backgroundImage: `url('${backgroundImage}')` }}></div>
       
-      {/* Overlay */}
       <div className="ra-parallax-overlay"></div>
       
-      {/* Content Container */}
       <div className="ra-parallax-content">
-        {/* Your content goes here */}
         <div className="ra-section-badge">Featured</div>
         
         <h2 className="ra-section-title">
@@ -83,7 +74,6 @@ const ElementorParallax: React.FC<ElementorParallaxProps> = ({
           {description}
         </p>
         
-        {/* Feature Cards */}
         <div className="ra-feature-cards">
           {features.map((feature, index) => (
             <div key={index} className="ra-feature-card">
@@ -97,7 +87,8 @@ const ElementorParallax: React.FC<ElementorParallaxProps> = ({
         </div>
       </div>
 
-      <style jsx>{`
+      <style>
+        {`
         /* Parallax Section Styles */
         .ra-parallax-section {
           position: relative;
@@ -251,7 +242,8 @@ const ElementorParallax: React.FC<ElementorParallaxProps> = ({
           opacity: 1;
           transform: translateY(0);
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };

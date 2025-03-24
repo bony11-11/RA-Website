@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 interface Product {
@@ -66,14 +65,12 @@ const ElementorProductShowcase: React.FC = () => {
   };
 
   useEffect(() => {
-    // Animate elements when they come into view
     const animateElements = document.querySelectorAll('.ra-product-header, .ra-product-tabs, .ra-product-display');
     
     animateElements.forEach(element => {
       element.classList.add('fade-in');
     });
     
-    // Intersection Observer for scroll animations
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -107,7 +104,6 @@ const ElementorProductShowcase: React.FC = () => {
       </div>
       
       <div className="ra-product-content">
-        {/* Product Tabs */}
         <div className="ra-product-tabs">
           {products.map(product => (
             <button 
@@ -121,7 +117,6 @@ const ElementorProductShowcase: React.FC = () => {
           ))}
         </div>
         
-        {/* Product Display */}
         <div className="ra-product-display">
           {products.map(product => (
             <div 
@@ -157,7 +152,8 @@ const ElementorProductShowcase: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>
+        {`
         /* Product Showcase Styles */
         .ra-product-showcase {
           padding: 80px 20px;
@@ -389,9 +385,11 @@ const ElementorProductShowcase: React.FC = () => {
           opacity: 1;
           transform: translateY(0);
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };
 
 export default ElementorProductShowcase;
+

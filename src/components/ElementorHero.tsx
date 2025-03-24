@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 
 const ElementorHero: React.FC = () => {
@@ -98,7 +97,8 @@ const ElementorHero: React.FC = () => {
         </svg>
       </div>
 
-      <style jsx>{`
+      <style>
+        {`
         /* Hero Section Styles */
         .ra-hero-section {
           position: relative;
@@ -228,7 +228,8 @@ const ElementorHero: React.FC = () => {
             flex-direction: column;
           }
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };

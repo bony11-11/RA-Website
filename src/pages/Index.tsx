@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import NavBar from '../components/NavBar';
+import NavBar from '../components/Navbar'; // Fixed casing to match actual file
 import Hero from '../components/Hero';
 import About from '../components/About';
 import ProductShowcase from '../components/ProductShowcase';

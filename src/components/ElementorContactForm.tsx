@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -169,7 +168,7 @@ const ElementorContactForm: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         /* Contact Form Styles */
         .ra-contact-form {
           background: rgba(10, 10, 10, 0.5);
@@ -292,7 +291,8 @@ const ElementorContactForm: React.FC = () => {
           height: 20px;
           color: #FCC007;
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };
