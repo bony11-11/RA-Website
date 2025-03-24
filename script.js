@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
   // Navbar scroll effect
   const navbar = document.getElementById('navbar');
@@ -64,11 +65,13 @@ document.addEventListener('DOMContentLoaded', function() {
       const navHeight = navbar.offsetHeight;
       const sectionTop = section.offsetTop;
       
+      // Close popup if open
       if (contactPopup) {
         contactPopup.classList.remove('active');
         document.body.style.overflow = '';
       }
       
+      // Scroll to section
       window.scrollTo({
         top: sectionTop - navHeight,
         behavior: 'smooth'
@@ -84,9 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
     card.addEventListener('click', function() {
       const dataId = this.getAttribute('data-id');
       
+      // Update active card
       solutionCards.forEach(c => c.classList.remove('active'));
       this.classList.add('active');
       
+      // Update active image
       solutionImages.forEach(img => {
         if (img.getAttribute('data-id') === dataId) {
           img.classList.add('active');
@@ -105,9 +110,11 @@ document.addEventListener('DOMContentLoaded', function() {
     tab.addEventListener('click', function() {
       const dataId = this.getAttribute('data-id');
       
+      // Update active tab
       serviceTabs.forEach(t => t.classList.remove('active'));
       this.classList.add('active');
       
+      // Update active display
       serviceDisplays.forEach(display => {
         if (display.getAttribute('data-id') === dataId) {
           display.classList.add('active');
@@ -132,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
       testimonialTrack.style.transform = `translateX(-${index * 100}%)`;
       currentSlide = index;
       
+      // Update dots
       dots.forEach((dot, i) => {
         if (i === index) {
           dot.classList.add('active');
@@ -164,12 +172,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Auto slide for testimonials
   let testimonialInterval = setInterval(function() {
     let index = currentSlide + 1;
     if (index >= slideCount) index = 0;
     goToSlide(index);
   }, 5000);
 
+  // Pause auto slide on hover
   if (testimonialTrack) {
     testimonialTrack.addEventListener('mouseenter', function() {
       clearInterval(testimonialInterval);
@@ -216,22 +226,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   };
 
+  // Add fade-in class to elements
   const elementsToAnimate = document.querySelectorAll('.section-header, .feature-card, .feature-box, .about-image, .about-text, .solutions-selector, .solution-images-container, .service-tab, .service-display, .contact-info, .contact-form-container');
   
   elementsToAnimate.forEach(element => {
     element.classList.add('fade-in');
   });
 
+  // Run on load
   animateOnScroll();
 
+  // Run on scroll
   window.addEventListener('scroll', animateOnScroll);
   
+  // Contact form submission
   const contactForm = document.getElementById('contactForm');
   
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
+      // Simulate form submission (replace with actual form processing)
       const submitBtn = contactForm.querySelector('.submit-btn');
       const originalText = submitBtn.textContent;
       
@@ -245,72 +260,5 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.disabled = false;
       }, 1500);
     });
-  }
-
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  galleryItems.forEach(item => {
-    item.classList.add('fade-in');
-  });
-
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const galleryGrid = document.querySelector('.gallery-grid');
-  
-  filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      this.classList.add('active');
-      
-      const filterValue = this.getAttribute('data-filter');
-      
-      galleryItems.forEach(item => {
-        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-          item.classList.remove('hidden');
-        } else {
-          item.classList.add('hidden');
-        }
-      });
-      
-      galleryGrid.classList.add('filter-change');
-      setTimeout(() => {
-        galleryGrid.classList.remove('filter-change');
-      }, 300);
-    });
-  });
-  
-  const navLinks = document.querySelector('.nav-links');
-  const servicesLink = document.querySelector('.nav-links a[href="#services"]');
-  
-  if (navLinks && servicesLink) {
-    const galleryLink = document.createElement('a');
-    galleryLink.href = "#gallery";
-    galleryLink.className = "nav-link";
-    galleryLink.textContent = "Gallery";
-    
-    navLinks.insertBefore(galleryLink, servicesLink.nextSibling);
-  }
-  
-  const mobileMenuLinks = document.querySelector('.mobile-menu-links');
-  const mobileServicesLink = document.querySelector('.mobile-menu-links a[href="#services"]');
-  
-  if (mobileMenuLinks && mobileServicesLink) {
-    const mobileGalleryLink = document.createElement('a');
-    mobileGalleryLink.href = "#gallery";
-    mobileGalleryLink.className = "mobile-nav-link";
-    mobileGalleryLink.textContent = "Gallery";
-    
-    mobileMenuLinks.insertBefore(mobileGalleryLink, mobileServicesLink.nextSibling);
-  }
-  
-  const footerQuickLinks = document.querySelector('.footer-column:first-child ul');
-  const testimonialsFooterLink = document.querySelector('.footer-column:first-child ul li:nth-child(4)');
-  
-  if (footerQuickLinks && testimonialsFooterLink) {
-    const footerGalleryItem = document.createElement('li');
-    const footerGalleryLink = document.createElement('a');
-    footerGalleryLink.href = "#gallery";
-    footerGalleryLink.textContent = "Gallery";
-    footerGalleryItem.appendChild(footerGalleryLink);
-    
-    footerQuickLinks.insertBefore(footerGalleryItem, testimonialsFooterLink);
   }
 });
