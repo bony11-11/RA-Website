@@ -44,19 +44,19 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button onClick={() => {
-            document.getElementById('solutions')?.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }} className="btn-primary">
+              document.getElementById('solutions')?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }} className="btn-primary">
               View Our Solutions
             </button>
             <button onClick={() => {
-            document.getElementById('contact')?.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }} className="btn-outline">
+              document.getElementById('contact')?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }} className="btn-outline">
               Get a Quote
             </button>
           </div>
@@ -64,11 +64,11 @@ const Hero = () => {
 
         {/* Scroll down indicator */}
         <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} onClick={() => {
-        document.getElementById('about')?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }}>
+          document.getElementById('about')?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }}>
           <div className="text-center">
             <span className="text-gold-500 block mb-2 text-sm font-light">Scroll</span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
