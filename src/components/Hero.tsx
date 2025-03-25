@@ -1,40 +1,45 @@
+
 import React, { useEffect, useState } from 'react';
+
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-  return <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
+  
+  return (
+    <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background video or image */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-dark-900/70 backdrop-filter backdrop-blur-sm z-10" style={{
-        mixBlendMode: 'multiply'
-      }}></div>
+          mixBlendMode: 'multiply'
+        }}></div>
         <div className="w-full h-full bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: 'url(/lovable-uploads/e2929eef-38ca-40e0-8d83-8810707c2324.png)',
-        transform: isLoaded ? 'scale(1.05)' : 'scale(1)',
-        transition: 'transform 10s ease-out'
-      }}></div>
+          backgroundImage: 'url(/lovable-uploads/e2929eef-38ca-40e0-8d83-8810707c2324.png)',
+          transform: isLoaded ? 'scale(1.05)' : 'scale(1)',
+          transition: 'transform 10s ease-out'
+        }}></div>
       </div>
 
       {/* Content */}
       <div className="container relative z-20 px-6 md:px-12 text-center">
         <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-block py-1 px-3 rounded-full bg-gold-500/20 text-gold-300 text-sm font-medium mb-6 border border-gold-500/30">
-            Specialized in premium tent solutions for over 36 years
+            Premium temporary structures for all occasions
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold text-white mb-6 leading-tight">
             <span className="block">
-              Elegant <span className="text-gold-500">Shelters</span> for
+              Quality <span className="text-gold-500">Tents</span> for
             </span>
             <span className="block">
-              Every <span className="text-gold-500">Occasion</span>
+              Every <span className="text-gold-500">Event</span>
             </span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-            Whether you're hosting a business event, a grand wedding, a product launch, or a community gathering, we have the perfect temporary structure to accommodate your guests in style and comfort.
+            From corporate events to wedding celebrations, we provide exceptional temporary structures tailored to your specific needs with superior craftsmanship.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -44,7 +49,7 @@ const Hero = () => {
               block: 'start'
             });
           }} className="btn-primary">
-              Explore Our Solutions
+              View Our Solutions
             </button>
             <button onClick={() => {
             document.getElementById('contact')?.scrollIntoView({
@@ -52,7 +57,7 @@ const Hero = () => {
               block: 'start'
             });
           }} className="btn-outline">
-              Contact Us
+              Get a Quote
             </button>
           </div>
         </div>
@@ -64,14 +69,16 @@ const Hero = () => {
           block: 'start'
         });
       }}>
-          <div className="place it under the buttons below it">
-            <span className="text-gold-500 mb-2 text-justify font-light text-sm">Scroll</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="Relocate it below the explore our solution button and contact us">
+          <div className="text-center">
+            <span className="text-gold-500 block mb-2 text-sm font-light">Scroll</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="#FCC007" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
