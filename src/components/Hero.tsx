@@ -1,25 +1,49 @@
-
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { useParallax } from '../hooks/use-parallax';
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  
+  const scrollY = useParallax();
+  const requestRef = useRef<number>();
+  const previousTimeRef = useRef<number>();
+
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-  
+
   return (
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background video or image */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-dark-900/70 backdrop-filter backdrop-blur-sm z-10" style={{
-          mixBlendMode: 'multiply'
-        }}></div>
-        <div className="w-full h-full bg-cover bg-center bg-no-repeat" style={{
-          backgroundImage: 'url(/lovable-uploads/e2929eef-38ca-40e0-8d83-8810707c2324.png)',
-          transform: isLoaded ? 'scale(1.05)' : 'scale(1)',
-          transition: 'transform 10s ease-out'
-        }}></div>
+      {/* Parallax background layers */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-dark-900/70 z-20 backdrop-filter backdrop-blur-sm"></div>
+        
+        {/* Far background (mountains) - moves slowest */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" 
+          style={{
+            backgroundImage: 'url(/lovable-uploads/a10-Mejorado-Edit_MAX.jpg)',
+            transform: `translateY(${isLoaded ? scrollY * 0.1 : 0}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}>
+        </div>
+        
+        {/* Mid background (tents) - moves medium speed */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10" 
+          style={{
+            backgroundImage: 'url(/lovable-uploads/b1-Mejorado_MAX.jpg)',
+            transform: `translateY(${isLoaded ? scrollY * 0.3 : 0}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}>
+        </div>
+        
+        {/* Foreground (people) - moves fastest */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-15" 
+          style={{
+            backgroundImage: 'url(/lovable-uploads/b3.jpg)',
+            transform: `translateY(${isLoaded ? scrollY * 0.5 : 0}px)`,
+            transition: 'transform 0.1s ease-out'
+          }}>
+        </div>
       </div>
 
       {/* Content */}
@@ -60,20 +84,20 @@ const Hero = () => {
               Get a Quote
             </button>
           </div>
-        </div>
 
-        {/* Scroll down indicator */}
-        <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} onClick={() => {
-          document.getElementById('about')?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }}>
-          <div className="text-center">
-            <span className="text-gold-500 block mb-2 text-sm font-light">Scroll</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="#FCC007" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
+          {/* Scroll down indicator */}
+          <div className={`flex justify-center mt-10 cursor-pointer animate-bounce transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`} onClick={() => {
+            document.getElementById('about')?.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }}>
+            <div className="flex flex-col items-center">
+              <span className="text-gold-500 text-sm font-light mb-2">Scroll</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="#FCC007" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>

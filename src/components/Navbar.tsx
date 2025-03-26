@@ -39,7 +39,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollToSection('hero')}>
             <div className="flex items-center">
-              <img src="/lovable-uploads/77ebbfe7-c793-402b-bf43-de2b56f01dc1.png" alt="RA Tents Logo" className="Reduce the size a little bit to make it equal in size to the contact us button" />
+              <img src="/lovable-uploads/77ebbfe7-c793-402b-bf43-de2b56f01dc1.png" alt="RA Tents Logo" className="h-[13.5rem] max-h-[13.5rem] w-auto transition-all" />
             </div>
           </div>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
             {/* Contact Popover */}
             <Popover>
               <PopoverTrigger asChild>
-                <button className="btn-primary">
+              <button className="btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.875rem' }}>
                   Contact Us
                 </button>
               </PopoverTrigger>

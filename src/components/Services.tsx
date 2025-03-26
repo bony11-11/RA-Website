@@ -43,7 +43,7 @@ const Services = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
       ),
-      image: '/lovable-uploads/8c4e2a6a-84dd-46c4-9f50-fa6c0862adb3.png'
+      image: '/lovable-uploads/b1-Mejorado_MAX.jpg'
     },
     {
       id: 2,
@@ -54,7 +54,7 @@ const Services = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
       ),
-      image: '/lovable-uploads/b8fd58c2-b95b-45ca-adfc-b6938c640c90.png'
+      image: '/lovable-uploads/d2-Mejorado_MAX.jpg'
     },
     {
       id: 3,
@@ -65,7 +65,7 @@ const Services = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      image: '/lovable-uploads/92914789-42b5-4728-af4f-02073822ac6e.png'
+      image: '/lovable-uploads/b20.jpg'
     }
   ];
 
@@ -137,19 +137,6 @@ const Services = () => {
                     alt={service.title} 
                     className="w-full h-full object-cover rounded-lg"
                   />
-                  
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 via-dark-900/30 to-transparent"></div>
-                  
-                  {/* Title overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8">
-                    <h3 className="text-2xl md:text-3xl font-bold text-gold-500 mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-white text-lg">
-                      {service.description}
-                    </p>
-                  </div>
                 </div>
               ))}
             </div>
