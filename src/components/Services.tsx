@@ -36,36 +36,36 @@ const Services = () => {
   const services: ServiceType[] = [
     {
       id: 1,
-      title: 'Tent Solutions',
-      description: 'Tailored tent designs for every occasion, from intimate gatherings to grand celebrations.',
+      title: 'Interior Design',
+      description: 'Tailored interior designs for every space, from intimate rooms to expansive living areas.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
         </svg>
       ),
-      image: '/lovable-uploads/8c4e2a6a-84dd-46c4-9f50-fa6c0862adb3.png'
+      image: '/lovable-uploads/1581090464777-f3220bbe1b8b.png'
     },
     {
       id: 2,
-      title: 'Shade Structures',
-      description: 'Providing shelter with elegance and durability, perfect for outdoor spaces.',
+      title: 'Work Spaces',
+      description: 'Creating productive environments with elegance and functionality, perfect for home offices.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
         </svg>
       ),
-      image: '/lovable-uploads/b8fd58c2-b95b-45ca-adfc-b6938c640c90.png'
+      image: '/lovable-uploads/1531297484001-80022131f5a1.png'
     },
     {
       id: 3,
-      title: 'Parking Sheds',
-      description: 'Protect vehicles with our reliable parking shed designs, built for longevity.',
+      title: 'Furniture Selection',
+      description: 'Expert furniture curation with our reliable selection process, built for longevity and style.',
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
-      image: '/lovable-uploads/92914789-42b5-4728-af4f-02073822ac6e.png'
+      image: '/lovable-uploads/1721322800607-8c38375eef04.png'
     }
   ];
 
@@ -80,7 +80,7 @@ const Services = () => {
             Our Specialized Services
           </h2>
           <p className="section-subtitle fade-in-on-scroll">
-            Crafting exceptional structures that combine aesthetics with functionality
+            Crafting exceptional living spaces that combine aesthetics with functionality
           </p>
         </div>
 

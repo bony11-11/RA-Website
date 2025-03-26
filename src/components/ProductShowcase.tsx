@@ -16,24 +16,24 @@ const ProductShowcase = () => {
   const products: Product[] = [
     {
       id: 1,
-      title: 'Event Tents',
-      description: 'Spacious and versatile tents perfect for large events, corporate gatherings, and exhibitions with customizable layouts.',
-      image: '/lovable-uploads/f715e17d-78a8-4d7c-b4f1-edf76ebad6de.png',
-      hoverImage: '/lovable-uploads/a7bc39fb-a644-47d0-a541-fb26b800dfc1.png'
+      title: 'Living Rooms',
+      description: 'Spacious and versatile living spaces perfect for family gatherings, entertainment, and relaxation with customizable layouts.',
+      image: '/lovable-uploads/1649972904349-6e44c42644a7.png',
+      hoverImage: '/lovable-uploads/1581091226825-a6a2a5aee158.png'
     },
     {
       id: 2,
-      title: 'Wedding Tents',
-      description: 'Elegant tent designs with beautiful finishing touches, ideal for creating magical wedding venues and celebrations.',
-      image: '/lovable-uploads/91ef57b8-5f63-4b2e-a03a-af98fae329d1.png',
-      hoverImage: '/lovable-uploads/b4f01652-85d5-40fc-a99c-b9f22dcd14e5.png'
+      title: 'Modern Workspaces',
+      description: 'Elegant home office designs with beautiful finishing touches, ideal for creating productive and inspiring work environments.',
+      image: '/lovable-uploads/1498050108023-c5249f4df085.png',
+      hoverImage: '/lovable-uploads/1486312338219-ce68d2c6f44d.png'
     },
     {
       id: 3,
-      title: 'Custom Structures',
-      description: 'Bespoke tent solutions tailored to your specific requirements, combining functionality with innovative design elements.',
-      image: '/lovable-uploads/98a47167-794f-490a-9bf0-e610147a6116.png',
-      hoverImage: '/lovable-uploads/0e5bbe5a-c74b-42c7-9397-05171cb9c176.png'
+      title: 'Custom Interiors',
+      description: 'Bespoke interior solutions tailored to your specific requirements, combining functionality with innovative design elements.',
+      image: '/lovable-uploads/1460925895917-afdab827c52f.png',
+      hoverImage: '/lovable-uploads/1488590528505-98d2b5aba04b.png'
     }
   ];
   
@@ -65,13 +65,13 @@ const ProductShowcase = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block py-1 px-3 rounded-full bg-gold-500/20 text-gold-300 text-sm font-medium mb-4 fade-in-on-scroll">
-            Our Solutions
+            Our Designs
           </div>
           <h2 className="section-title fade-in-on-scroll">
-            Premium Tent Solutions
+            Premium Interior Solutions
           </h2>
           <p className="section-subtitle fade-in-on-scroll">
-            Functional and elegant temporary structures for all your event needs
+            Functional and elegant living spaces for all your lifestyle needs
           </p>
         </div>
 
