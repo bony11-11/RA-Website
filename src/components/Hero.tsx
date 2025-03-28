@@ -21,7 +21,7 @@ const Hero = () => {
         {/* Far background (mountains) - moves slowest */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" 
           style={{
-            backgroundImage: 'url(/lovable-uploads/a10-Mejorado-Edit_MAX.jpg)',
+            backgroundImage: 'url(/lovable-uploads/d9-Mejorado-Edit_MAX_optimized.png)',
             transform: `translateY(${isLoaded ? scrollY * 0.1 : 0}px)`,
             transition: 'transform 0.1s ease-out'
           }}>
@@ -30,7 +30,7 @@ const Hero = () => {
         {/* Mid background (tents) - moves medium speed */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-10" 
           style={{
-            backgroundImage: 'url(/lovable-uploads/b1-Mejorado_MAX.jpg)',
+            backgroundImage: 'url(/lovable-uploads/b2_optimized.png)',
             transform: `translateY(${isLoaded ? scrollY * 0.3 : 0}px)`,
             transition: 'transform 0.1s ease-out'
           }}>
@@ -39,7 +39,7 @@ const Hero = () => {
         {/* Foreground (people) - moves fastest */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat z-15" 
           style={{
-            backgroundImage: 'url(/lovable-uploads/b3.jpg)',
+            backgroundImage: 'url(/lovable-uploads/b14.png)',
             transform: `translateY(${isLoaded ? scrollY * 0.5 : 0}px)`,
             transition: 'transform 0.1s ease-out'
           }}>

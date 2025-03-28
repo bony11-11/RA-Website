@@ -133,15 +133,15 @@ const ContactForm = () => {
         <h4 className="text-lg font-medium text-gold-500 mb-4">Quick Contact</h4>
         <div className="space-y-3">
           <a 
-            href="tel:+971501234567" 
+            href="tel:+971506979698" 
             className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors"
           >
             <Phone className="h-5 w-5 text-gold-500" />
-            <span>+971 50 123 4567</span>
+            <span>+971 50 697 9698</span>
           </a>
           
           <a 
-            href="https://wa.me/971501234567" 
+            href="https://wa.me/971506979698" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors"
@@ -151,11 +151,11 @@ const ContactForm = () => {
           </a>
           
           <a 
-            href="mailto:info@ratents.com" 
+            href="mailto:sales@ratents.com" 
             className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors"
           >
             <Mail className="h-5 w-5 text-gold-500" />
-            <span>info@ratents.com</span>
+            <span>sales@ratents.com</span>
           </a>
         </div>
       </div>

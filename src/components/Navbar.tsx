@@ -70,19 +70,19 @@ const Navbar = () => {
                   <h3 className="text-xl font-bold text-gold-500">Contact Us</h3>
                   
                   <div className="flex flex-col space-y-3">
-                    <a href="tel:+971501234567" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
+                    <a href="tel:+971506979698" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
                       <Phone className="h-5 w-5 text-gold-500" />
-                      <span>+971 50 123 4567</span>
+                      <span>+971 50 697 9698</span>
                     </a>
                     
-                    <a href="https://wa.me/971501234567" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
+                    <a href="https://wa.me/971506979698" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
                       <MessageSquare className="h-5 w-5 text-gold-500" />
                       <span>WhatsApp</span>
                     </a>
                     
-                    <a href="mailto:info@ratents.com" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
+                    <a href="mailto:sales@ratents.com" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
                       <Mail className="h-5 w-5 text-gold-500" />
-                      <span>info@ratents.com</span>
+                      <span>sales@ratents.com</span>
                     </a>
                   </div>
                   
@@ -140,19 +140,19 @@ const Navbar = () => {
                   <div className="border-t border-gold-500/20 pt-4 mt-2">
                     <h3 className="text-lg font-medium text-gold-500 mb-3 px-4">Quick Contact</h3>
                     <div className="space-y-3 px-4">
-                      <a href="tel:+971501234567" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
+                      <a href="tel:+971506979698" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
                         <Phone className="h-5 w-5 text-gold-500" />
-                        <span>+971 50 123 4567</span>
+                        <span>+971 50 697 9698</span>
                       </a>
                       
-                      <a href="https://wa.me/971501234567" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
+                      <a href="https://wa.me/971506979698" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
                         <MessageSquare className="h-5 w-5 text-gold-500" />
                         <span>WhatsApp</span>
                       </a>
                       
-                      <a href="mailto:info@ratents.com" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
+                      <a href="mailto:sales@ratents.com" className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors">
                         <Mail className="h-5 w-5 text-gold-500" />
-                        <span>info@ratents.com</span>
+                        <span>sales@ratents.com</span>
                       </a>
                     </div>
                   </div>
