@@ -1360,129 +1360,129 @@ input:focus, textarea:focus {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .section-title {
-    font-size: 32px;
-  }
-  
-  .hero-title {
-    font-size: 42px;
-  }
-  
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .services-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .services-tabs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+	.section-title {
+		font-size: 32px;
+	}
+
+	.hero-title {
+		font-size: 42px;
+	}
+
+	.features-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.services-content {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.services-tabs {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.contact-content {
+		grid-template-columns: 1fr;
+	}
+
+	.footer-top {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-  
-  .mobile-menu-btn {
-    display: flex;
-  }
-  
-  .hero-title {
-    font-size: 36px;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .about-features {
-    grid-template-columns: 1fr;
-  }
-  
-  .solutions-content {
-    grid-template-columns: 1fr;
-  }
-  
-  .solution-images-container {
-    order: 1;
-  }
-  
-  .solutions-selector {
-    order: 2;
-  }
-  
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .services-tabs {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-links {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-  
-  .form-row {
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .form-group.half {
-    width: 100%;
-  }
+	.nav-links {
+		display: none;
+	}
+
+	.mobile-menu-btn {
+		display: flex;
+	}
+
+	.hero-title {
+		font-size: 36px;
+	}
+
+	.hero-buttons {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.about-content {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.about-features {
+		grid-template-columns: 1fr;
+	}
+
+	.solutions-content {
+		grid-template-columns: 1fr;
+	}
+
+	.solution-images-container {
+		order: 1;
+	}
+
+	.solutions-selector {
+		order: 2;
+	}
+
+	.features-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.services-tabs {
+		grid-template-columns: 1fr;
+	}
+
+	.footer-links {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+
+	.footer-bottom {
+		flex-direction: column;
+		gap: 20px;
+		text-align: center;
+	}
+
+	.form-row {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.form-group.half {
+		width: 100%;
+	}
 }
 
 @media (max-width: 480px) {
-  .section-title {
-    font-size: 28px;
-  }
-  
-  .hero-title {
-    font-size: 30px;
-  }
-  
-  .hero-description {
-    font-size: 16px;
-  }
-  
-  .service-tab {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-  
-  .scroll-to-top {
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-  }
+	.section-title {
+		font-size: 28px;
+	}
+
+	.hero-title {
+		font-size: 30px;
+	}
+
+	.hero-description {
+		font-size: 16px;
+	}
+
+	.service-tab {
+		flex-direction: column;
+		text-align: center;
+		gap: 10px;
+	}
+
+	.scroll-to-top {
+		bottom: 20px;
+		right: 20px;
+		width: 40px;
+		height: 40px;
+	}
 }
