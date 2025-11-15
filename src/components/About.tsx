@@ -45,6 +45,7 @@ const About = () => {
                   src="/lovable-uploads/756ff86f-5dbc-4c7e-8f2a-4b389e0297c4.png" 
                   alt="Elegant tent solution" 
                   className="w-full h-auto object-cover rounded-lg transition-transform duration-700 hover:scale-105"
+                  loading="lazy"
                 />
               </div>
             </div>

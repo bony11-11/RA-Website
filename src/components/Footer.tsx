@@ -36,6 +36,7 @@ const Footer = () => {
                 src="/lovable-uploads/77ebbfe7-c793-402b-bf43-de2b56f01dc1.png" 
                 alt="RA Tents Logo" 
                 className="h-16 mb-4" 
+                loading="lazy"
               />
               <p className="text-gray-400 max-w-md">
                 Specialized in premium tent solutions for over 36 years. Crafting exceptional structures that combine aesthetics with functionality.

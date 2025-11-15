@@ -118,6 +118,7 @@ const ProductShowcase = () => {
                     src={product.image} 
                     alt={product.title} 
                     className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               ))}
