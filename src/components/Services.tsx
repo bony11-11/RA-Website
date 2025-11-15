@@ -136,6 +136,7 @@ const Services = () => {
                     src={service.image} 
                     alt={service.title} 
                     className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
                   />
                 </div>
               ))}
