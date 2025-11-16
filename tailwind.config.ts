@@ -1,5 +1,5 @@
-
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
 	darkMode: ["class"],
@@ -20,15 +20,20 @@ export default {
 		},
 		extend: {
 			colors: {
+				"primary": "#D4AF37",
+				"primary-accent": "#D4AF37",
+				"background-light": "#F8F9FA",
+				"background-dark": "#121212",
+				"text-light": "#333333",
+				"text-dark": "#F8F9FA",
+				"surface-light": "#FFFFFF",
+				"surface-dark": "#1A1A1A",
+				"brand-gold": "#D4AF37",
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
-				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
@@ -53,44 +58,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				gold: {
-					50: '#FEF9E7',
-					100: '#FEF0CA',
-					200: '#FEE695',
-					300: '#FDDA60',
-					400: '#FDCF3B',
-					500: '#FCC007', // Primary gold
-					600: '#D9A206',
-					700: '#B58505',
-					800: '#926804',
-					900: '#785403',
-				},
-				dark: {
-					100: '#262626',
-					200: '#1E1E1E',
-					300: '#171717',
-					400: '#121212',
-					500: '#0A0A0A',
-					600: '#070707',
-					700: '#050505',
-					800: '#030303',
-					900: '#000000',
-				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+			},
+			fontFamily: {
+				"display": ["Public Sans", "sans-serif"]
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				"DEFAULT": "0.25rem",
+				"lg": "0.5rem",
+				"xl": "0.75rem",
+				"full": "9999px"
 			},
 			keyframes: {
 				'accordion-down': {
@@ -152,5 +128,5 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [tailwindcssAnimate],
 } satisfies Config;

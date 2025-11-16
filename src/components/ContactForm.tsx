@@ -1,14 +1,16 @@
-
-import React, { useState } from 'react';
-import { Phone, Mail, MessageSquare, Send } from 'lucide-react';
+import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Label } from '@/components/ui/label';
 
 const ContactForm = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
+    company: '',
     email: '',
-    phone: '',
     message: ''
   });
 
@@ -23,143 +25,105 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Form validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Error",
-        description: "Please fill out all required fields",
+        description: "Please fill out all required fields.",
         variant: "destructive"
       });
       return;
     }
 
-    // In a real application, you would send this data to your backend
     console.log('Form submitted:', formData);
     
-    // Success message
     toast({
-      title: "Success!",
-      description: "Your message has been sent. We'll get back to you soon.",
+      title: "Inquiry Sent!",
+      description: "Thank you for your message. We'll be in touch shortly.",
       variant: "default"
     });
     
-    // Reset form
     setFormData({
       name: '',
+      company: '',
       email: '',
-      phone: '',
       message: ''
     });
   };
 
   return (
-    <div className="glass-card p-6 md:p-8 rounded-lg max-w-md mx-auto lg:mx-0">
-      <h3 className="text-2xl font-bold text-gold-500 mb-6">Send Us a Message</h3>
-      
-      <form onSubmit={handleSubmit} className="space-y-5">
-        <div>
-          <label htmlFor="name" className="block text-white text-sm font-medium mb-2">
-            Your Name <span className="text-gold-500">*</span>
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full px-4 py-3 bg-dark-700/80 border border-gold-500/30 rounded-md focus:outline-none focus:ring-2 focus:ring-gold-500/50 text-white"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
-        
-        <div>
-          <label htmlFor="email" className="block text-white text-sm font-medium mb-2">
-            Email Address <span className="text-gold-500">*</span>
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full px-4 py-3 bg-dark-700/80 border border-gold-500/30 rounded-md focus:outline-none focus:ring-2 focus:ring-gold-500/50 text-white"
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-        
-        <div>
-          <label htmlFor="phone" className="block text-white text-sm font-medium mb-2">
-            Phone Number
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full px-4 py-3 bg-dark-700/80 border border-gold-500/30 rounded-md focus:outline-none focus:ring-2 focus:ring-gold-500/50 text-white"
-            placeholder="Enter your phone number"
-          />
-        </div>
-        
-        <div>
-          <label htmlFor="message" className="block text-white text-sm font-medium mb-2">
-            Message <span className="text-gold-500">*</span>
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            rows={4}
-            className="w-full px-4 py-3 bg-dark-700/80 border border-gold-500/30 rounded-md focus:outline-none focus:ring-2 focus:ring-gold-500/50 text-white resize-none"
-            placeholder="How can we help you?"
-            required
-          ></textarea>
-        </div>
-        
-        <button 
-          type="submit" 
-          className="w-full btn-primary flex items-center justify-center"
-        >
-          <Send className="mr-2 h-5 w-5" />
-          Send Message
-        </button>
-      </form>
-      
-      <div className="mt-8 pt-6 border-t border-gold-500/20">
-        <h4 className="text-lg font-medium text-gold-500 mb-4">Quick Contact</h4>
-        <div className="space-y-3">
-          <a 
-            href="tel:+971506979698" 
-            className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors"
-          >
-            <Phone className="h-5 w-5 text-gold-500" />
-            <span>+971 50 697 9698</span>
-          </a>
-          
-          <a 
-            href="https://wa.me/971506979698" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors"
-          >
-            <MessageSquare className="h-5 w-5 text-gold-500" />
-            <span>WhatsApp Us</span>
-          </a>
-          
-          <a 
-            href="mailto:sales@ratents.com" 
-            className="flex items-center space-x-3 text-white hover:text-gold-500 transition-colors"
-          >
-            <Mail className="h-5 w-5 text-gold-500" />
-            <span>sales@ratents.com</span>
-          </a>
+    <section className="py-16 md:py-24 fade-in-on-scroll" id="contact">
+      <div className="bg-surface-dark rounded-xl p-8 md:p-12 border border-gray-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="flex flex-col justify-center">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em]">
+              Get in <span className="text-primary">Touch</span>
+            </h2>
+            <p className="text-gray-400 mt-3">
+              Have a project in mind or want to learn more about our services? Fill out the form and our team will get back to you shortly.
+            </p>
+          </div>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <div className="flex flex-col">
+              <Label className="text-sm font-medium mb-1" htmlFor="name">Name</Label>
+              <Input
+                className="w-full rounded-md border-gray-700 bg-background-dark focus:ring-primary focus:border-primary text-white"
+                id="name"
+                name="name"
+                placeholder="John Doe"
+                type="text"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="flex flex-col">
+              <Label className="text-sm font-medium mb-1" htmlFor="company">Company</Label>
+              <Input
+                className="w-full rounded-md border-gray-700 bg-background-dark focus:ring-primary focus:border-primary text-white"
+                id="company"
+                name="company"
+                placeholder="Your Company Name"
+                type="text"
+                value={formData.company}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex flex-col">
+              <Label className="text-sm font-medium mb-1" htmlFor="email">Email</Label>
+              <Input
+                className="w-full rounded-md border-gray-700 bg-background-dark focus:ring-primary focus:border-primary text-white"
+                id="email"
+                name="email"
+                placeholder="you@company.com"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="flex flex-col">
+              <Label className="text-sm font-medium mb-1" htmlFor="message">Message</Label>
+              <Textarea
+                className="w-full rounded-md border-gray-700 bg-background-dark focus:ring-primary focus:border-primary text-white"
+                id="message"
+                name="message"
+                placeholder="How can we help you?"
+                rows={4}
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <Button
+              className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-12 px-6 bg-primary text-black text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors w-full md:w-auto self-end mt-2"
+              type="submit"
+            >
+              <span className="truncate">Submit Inquiry</span>
+            </Button>
+          </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
